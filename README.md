@@ -1,2 +1,2 @@
 # RecipeRepo
-Web app for storage and retrival of cooking and baking recipes
+Web app for storage and retrieval of cooking and baking recipes
