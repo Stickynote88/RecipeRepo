@@ -13,6 +13,7 @@
 
 * Add new recipies 
 * Edit existing recipies 
+* Ability to parse out recipie on add or edit call
 * View all recipies for given user 
 * Search based on parameters 
     * recipie name 
