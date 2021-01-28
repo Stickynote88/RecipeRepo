@@ -6,8 +6,8 @@ app = Flask(__name__)
 api = Api(app)
 
 @app.route('/')
-def hello_world():
-	return 'Hi Jonathan'
+def index():
+	return render_template('index.html')
 
 
 class Recipie(Resource):
@@ -25,8 +25,6 @@ class Recipie(Resource):
 		return "something"
 
 api.add_resource(Recipie, '/recipie/<recipie_id>')
-def index():
-	return render_template('index.html')
 
 if __name__ == '__main__':
 	app.run(debug=True)
