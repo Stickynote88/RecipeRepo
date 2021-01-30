@@ -10,27 +10,27 @@ def index():
 	return render_template('index.html')
 
 
-class Recipie(Resource):
+class Recipe(Resource):
 # adds restful functionality 
 # link : https://flask-restful.readthedocs.io/en/latest/quickstart.html#full-example
 
-	def get(self, recipie_id):
-		# handles HTTP GET request at /recipie/<recipie_id>
+	def get(self, recipe_id):
+		# handles HTTP GET request at /recipe/<recipe_id>
 		if True : 
 			# if todo doesn't exist 
 			abort(
 				404, 
-				message="recipie {} doesn't exist".format(recipie_id)
+				message="recipe {} doesn't exist".format(recipe_id)
 			)
 		else :
 			return "something"
 
-	def put(self, recipie_id):
-		# handles HTTP PUT request at /recipie/<recipie_id>
+	def put(self, recipe_id):
+		# handles HTTP PUT request at /recipe/<recipe_id>
 		return "something"
 
-# registers Recipie object to handle /recipie
-api.add_resource(Recipie, '/recipie/<recipie_id>')
+# registers Recipe object to handle /recipe
+api.add_resource(Recipe, '/recipe/<recipe_id>')
 
 if __name__ == '__main__':
 	app.run(debug=True)
