@@ -39,7 +39,7 @@ class Recipe(Resource):
 
 	def get(self, recipe_id):
 		# handles HTTP GET request at /recipe/<recipe_id>
-		return_df = web_data.loc[web_data['ID'] == recipe_id].to_json()
+		return_df = web_data.loc[web_data['ID'] == recipe_id]
 		if len(return_df.index) == 0:
 			# if todo doesn't exist 
 			abort(
@@ -47,7 +47,7 @@ class Recipe(Resource):
 				message="recipe {} doesn't exist".format(recipe_id)
 			)
 		else :
-			return web_data.loc[web_data['ID'] == recipe_id].to_json()
+			return return_df.to_json()
 
 	def put(self, recipe_id):
 		# handles HTTP PUT request at /recipe/<recipe_id>
