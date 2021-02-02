@@ -46,7 +46,7 @@ class Recipe(Resource):
 				message="recipe {} doesn't exist".format(recipe_id)
 			)
 		else :
-			return "something"
+			return web_data.loc[web_data['ID'] == recipe_id].to_json()
 
 	def put(self, recipe_id):
 		# handles HTTP PUT request at /recipe/<recipe_id>
