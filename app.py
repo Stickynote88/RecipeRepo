@@ -39,7 +39,8 @@ class Recipe(Resource):
 
 	def get(self, recipe_id):
 		# handles HTTP GET request at /recipe/<recipe_id>
-		if True : 
+		return_df = web_data.loc[web_data['ID'] == recipe_id].to_json()
+		if len(return_df.index) == 0:
 			# if todo doesn't exist 
 			abort(
 				404, 
