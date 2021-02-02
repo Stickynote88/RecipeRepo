@@ -8,9 +8,23 @@ app = Flask(__name__)
 api = Api(app)
 
 web_data = pd.DataFrame(data={
-	'A' : [1,2,3,4,5,5],
-	'B' : [5,5,4,3,2,1],
-	'C' : ['t','e','s','t','!','!']
+	'Index' : [1,2,3,4,5,6],
+	'Recipe' : [
+		'Chicken',
+		'Turkey',
+		'Meatballs',
+		'Seafood Cassarole',
+		'I can\'t spell',
+		'Smoothie'
+	],
+	'ID' : [
+		69,
+		420,
+		69420,
+		42069,
+		15,
+		16
+	]
 })
 
 
