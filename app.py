@@ -39,7 +39,7 @@ class Recipe(Resource):
 
 	def get(self, recipe_id):
 		# handles HTTP GET request at /recipe/<recipe_id>
-		return_df = web_data.loc[web_data['ID'] == recipe_id]
+		return_df = web_data.loc[web_data['ID'] == int(recipe_id)]
 		if len(return_df.index) == 0:
 			# if todo doesn't exist 
 			abort(
