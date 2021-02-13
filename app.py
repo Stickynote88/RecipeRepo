@@ -1,8 +1,7 @@
 import pandas as pd 
 import numpy as np
-from flask import Flask 
-from flask_restful import reqparse, abort, Api, Resource 
 from flask import Flask, render_template
+from flask_restful import reqparse, abort, Api, Resource 
 import psycopg2
 from pyconfig import host, database, user, password
 
